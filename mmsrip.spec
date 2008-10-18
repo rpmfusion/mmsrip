@@ -1,10 +1,7 @@
-# $Id: mmsrip.spec,v 1.1 2008/10/18 14:01:33 thl Exp $
-# Authority: matthias
-
 Summary: MMS Streams Recorder
 Name: mmsrip
 Version: 0.7.0
-Release: 2.fc7
+Release: 2%{?dist}
 License: GPL
 Group: Applications/Multimedia
 URL: http://nbenoit.tuxfamily.org/projects.php?rq=mmsrip
@@ -44,7 +41,7 @@ tool for the others.
 
 
 %changelog
-* Sat Oct 18 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 0.7.0-2.fc7
+* Sat Oct 18 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 0.7.0-2
 - rebuild for RPM Fusion
 
 * Fri Sep  8 2006 Matthias Saou <http://freshrpms.net/> 0.7.0-1
