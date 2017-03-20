@@ -1,7 +1,7 @@
 Summary: MMS Streams Recorder
 Name: mmsrip
 Version: 0.7.0
-Release: 6%{?dist}
+Release: 7%{?dist}
 License: GPL
 Group: Applications/Multimedia
 URL: http://nbenoit.tuxfamily.org/projects.php?rq=mmsrip
@@ -41,6 +41,9 @@ tool for the others.
 
 
 %changelog
+* Mon Mar 20 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 0.7.0-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Sun Aug 31 2014 Sérgio Basto <sergio@serjux.com> - 0.7.0-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
 
