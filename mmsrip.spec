@@ -2,11 +2,10 @@ Summary: MMS Streams Recorder
 Name: mmsrip
 Version: 0.7.0
 Release: 11%{?dist}
-License: GPL
-Group: Applications/Multimedia
+License: GPLv2+
 URL: http://nbenoit.tuxfamily.org/projects.php?rq=mmsrip
 Source: http://nbenoit.tuxfamily.org/projects/mmsrip/%{name}-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRequires: gcc
 
 %description
 MMSRIP is a pure useless program which allows you to save on your hard-disk
@@ -16,26 +15,20 @@ tool for the others.
 
 
 %prep
-%setup
+%setup -q
 
 
 %build
 %configure
-%{__make} %{?_smp_mflags}
+%make_build
 
 
 %install
-%{__rm} -rf %{buildroot}
-%makeinstall
-
-
-%clean
-%{__rm} -rf %{buildroot}
-
+%make_install
 
 %files
-%defattr(-, root, root, 0755)
-%doc AUTHORS ChangeLog COPYING NEWS README
+%doc AUTHORS ChangeLog NEWS README
+%license COPYING
 %{_bindir}/mmsrip
 %{_mandir}/man?/*
 
@@ -43,6 +36,9 @@ tool for the others.
 %changelog
 * Mon Mar 04 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.7.0-11
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+- Fix make command
+- Add BuildRequires: gcc
+- Spec file clean up
 
 * Fri Jul 27 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.7.0-10
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
